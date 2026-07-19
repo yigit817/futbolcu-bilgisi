@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026 FIFA Dünya Kupası Analitik Raporu</title>
+    <title>2026 FIFA Dünya Kupası Ülke Raporu</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -36,7 +36,7 @@
             padding: 0 25px;
         }
 
-        /* --- Editoryal Analiz Paneli --- */
+        /* --- Editoryal Rapor Alanı --- */
         .editorial-section {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -58,28 +58,15 @@
             font-size: 1.4rem;
             color: #1a252f;
             margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
         .report-box p {
             font-size: 1rem;
             line-height: 1.6;
             color: #4a5568;
-            margin: 0 0 15px 0;
-        }
-        .report-box ul {
             margin: 0;
-            padding-left: 20px;
-            color: #4a5568;
-        }
-        .report-box li {
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-            line-height: 1.5;
         }
 
-        /* --- Filtreleme Elemanları --- */
+        /* --- Ülke Filtreleme Butonları --- */
         .filter-section-title {
             font-size: 1.8rem;
             font-weight: 700;
@@ -105,13 +92,13 @@
             transition: all 0.2s ease;
         }
         .filter-btn.active, .filter-btn:hover {
-            background-color: #1a252f;
-            border-color: #1a252f;
+            background-color: #27ae60;
+            border-color: #27ae60;
             color: white;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
-        /* --- Kart Izgarası --- */
+        /* --- Kart Yapısı --- */
         .player-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
@@ -151,7 +138,6 @@
             font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
         .player-card.field .badge { background-color: #e0f2fe; color: #0369a1; }
         .player-card.gk .badge { background-color: #ffedd5; color: #c2410c; }
@@ -162,19 +148,14 @@
         .player-detail strong { color: #0f172a; }
         
         .special-note {
-            background-color: #f8fafc;
+            background-color: #fffaf5;
+            border-left: 3px solid #f97316;
+            color: #c2410c;
             border-radius: 8px;
             padding: 12px;
             margin-top: 15px;
             font-size: 0.9rem;
-            color: #475569;
-            border-left: 3px solid #cbd5e1;
             line-height: 1.4;
-        }
-        .player-card.gk .special-note {
-            background-color: #fffaf5;
-            border-left-color: #f97316;
-            color: #c2410c;
         }
     </style>
 </head>
@@ -182,238 +163,192 @@
 
     <header>
         <h1>2026 FIFA DÜNYA KUPASI RAPORU</h1>
-        <p>48 Takımlı Yeni Formatın Teknik Analizi ve Turnuva Karması</p>
+        <p>Ülke Gruplarına Göre Turnuva Raporu ve Öne Çıkan Kadrolar</p>
     </header>
 
     <div class="container">
 
-        <!-- Metin Odaklı Editoryal Analiz Paneli -->
+        <!-- Editoryal Analiz Paneli -->
         <div class="editorial-section">
-            
             <div class="report-box success">
-                <h3>🏆 Genel Turnuva Özeti & Final</h3>
-                <p>Kuzey Amerika kıtasında (ABD, Meksika, Kanada) düzenlenen ve tarihte ilk kez 48 takımın katılımıyla gerçekleşen 2026 FIFA Dünya Kupası, futbol tarihinin en yoğun fikstürüne sahne oldu. New York MetLife Stadyumu'nda oynanan dev finalde, taktiksel disiplini ve turnuva tecrübesiyle öne çıkan <strong>Arjantin</strong>, genç jenerasyonuyla fırtına gibi esen <strong>Fransa'yı 2-1 mağlup ederek</strong> şampiyonluk unvanını korudu.</p>
+                <h3>🏆 Genel Turnuva Özeti</h3>
+                <p>48 takımın katılımıyla ABD, Meksika ve Kanada ortaklığında düzenlenen 2026 FIFA Dünya Kupası, futbol tarihinin en geniş ekosistemine sahne oldu. New York MetLife Stadyumu'ndaki finalde Arjantin, Fransa'yı 2-1 yenerek kupayı müzesine götürdü.</p>
             </div>
-
-            <div class="report-box">
-                <h3>📊 Taktiksel Trendler ve Analiz</h3>
-                <p>2026 turnuvası, geçiş hücumlarının ve atletizmin zirve yaptığı bir dönem olarak kayıtlara geçti. Set hücumlarından ziyade, topu kapar kapmaz 5-6 saniyede rakip kale önünde biten takımlar başarıya ulaştı:</p>
-                <ul>
-                    <li><strong>Genişletilmiş Kadro Etkisi:</strong> Yoğun seyahat programı nedeniyle geniş rotasyona sahip takımlar turnuvanın son kulvarında ayakta kaldı.</li>
-                    <li><strong>Beklerin Evrimi:</strong> Klasik savunmacı bekler yerine, Ferdi Kadıoğlu ve Hakimi gibi orta saha menşeili, çizgi koridorunu tek başına kapatan oyuncular turnuvaya yön verdi.</li>
-                </ul>
-            </div>
-
             <div class="report-box warning">
-                <h3>⚡ Kırılan Rekorlar & İz Bırakanlar</h3>
-                <ul>
-                    <li><strong>Lionel Messi:</strong> 39 yaşında bir kez daha Dünya Kupası kaldırarak turnuva tarihinin en yaşlı şampiyon kaptanı ve en çok maça çıkan oyuncusu unvanını perçinledi.</li>
-                    <li><strong>48 Takımlı Kaos:</strong> Grup aşamalarında oynanan eş zamanlı maçlar, turnuva tarihindeki en yüksek gol ortalamasına (maç başına 3.2 gol) ulaşılmasını sağladı.</li>
-                    <li><strong>Milli Gurur:</strong> A Milli Takımımız, turnuvanın en genç yaş ortalamasına sahip ekiplerinden biri olmasına rağmen çeyrek finale kadar yürüyerek dünya basınında geniş yer buldu.</li>
-                </ul>
+                <h3>🇹🇷 Türkiye'nin Tarihi Yürüyüşü</h3>
+                <p>Genç yaş ortalamasıyla turnuvaya katılan A Milli Takımımız, oynadığı cesur ve geçiş odaklı futbolla çeyrek finale kadar yükseldi. Arda Güler'in yaratıcılığı ve Mert Günok'un kritik kurtarışları dünya basınında geniş yer buldu.</p>
             </div>
-
         </div>
 
-        <h2 class="filter-section-title">⭐ Turnuva Karması ve Oyuncu Detayları</h2>
+        <h2 class="filter-section-title">🌍 Ülkelere Göre Oyuncu Veri Tabanı</h2>
 
-        <!-- Pozisyon Filtreleme Butonları -->
+        <!-- ÜLKE FİLTRELEME BUTONLARI -->
         <div class="filter-container">
-            <button class="filter-btn active" onclick="filterSelection('hepsi')">Tüm Kadro</button>
-            <button class="filter-btn" onclick="filterSelection('kaleci')">Kaleciler</button>
-            <button class="filter-btn" onclick="filterSelection('santrafor')">Santraforlar</button>
-            <button class="filter-btn" onclick="filterSelection('forvet')">Forvetler</button>
-            <button class="filter-btn" onclick="filterSelection('kanat')">Kanatlar</button>
-            <button class="filter-btn" onclick="filterSelection('orta-saha')">Orta Sahalar</button>
-            <button class="filter-btn" onclick="filterSelection('savunma')">Savunmacılar</button>
+            <button class="filter-btn active" onclick="filterSelection('hepsi')">Tüm Ülkeler</button>
+            <button class="filter-btn" onclick="filterSelection('turkiye')">Türkiye 🇹🇷</button>
+            <button class="filter-btn" onclick="filterSelection('arjantin')">Arjantin 🇦🇷</button>
+            <button class="filter-btn" onclick="filterSelection('fransa')">Fransa 🇫🇷</button>
+            <button class="filter-btn" onclick="filterSelection('ingiltere')">İngiltere 🏴󠁧󠁢󠁥󠁮󠁧󠁿</button>
+            <button class="filter-btn" onclick="filterSelection('ispanya')">İspanya 🇪🇸</button>
+            <button class="filter-btn" onclick="filterSelection('diger')">Diğer Ülkeler 🌐</button>
         </div>
         
-        <!-- 24 Oyunculu Metin Odaklı Kadro Izgarası -->
+        <!-- OYUNCU IZGARASI -->
         <div class="player-grid">
             
-            <!-- ORTA SAHALAR -->
-            <div class="player-card field orta-saha">
+            <!-- TÜRKİYE -->
+            <div class="player-card field turkiye">
                 <span class="badge">Orta Saha</span>
                 <div class="player-name">Arda Güler</div>
                 <div class="player-meta">Türkiye | 21 Yaş | Real Madrid</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Ceza sahası dışından attığı 2 jeneriklik gol ve yaptığı 4 asist ile turnuvanın en çok konuşulan oyun kurucusu oldu. Maestro rolünü üstlendi.</div>
+                <div class="player-detail"><strong>Performans:</strong> Ceza sahası dışından attığı jeneriklik goller ve yaptığı 4 asist ile turnuvanın en çok konuşulan genç yeteneği oldu.</div>
             </div>
-
-            <div class="player-card field orta-saha">
-                <span class="badge">Orta Saha</span>
-                <div class="player-name">Jude Bellingham</div>
-                <div class="player-meta">İngiltere | 23 Yaş | Real Madrid</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Fiziksel üstünlüğü ve bitmek bilmeyen enerjisiyle İngiltere orta sahasının merkezini tek başına domine etti. Hem savunma kıran pasları hem de ceza sahası koşularıyla çift yönlü liderlik sergiledi.</div>
-            </div>
-
-            <div class="player-card field orta-saha">
-                <span class="badge">Orta Saha</span>
-                <div class="player-name">Jamal Musiala</div>
-                <div class="player-meta">Almanya | 23 Yaş | Bayern Münih</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Almanya'nın erken vedasına rağmen dar alandaki inanılmaz çalım yeteneği ve adam eksiltme becerisiyle turnuvanın en efektif dribling yapan oyuncusu oldu. 3 gol kaydetti.</div>
-            </div>
-
-            <div class="player-card field orta-saha">
-                <span class="badge">Orta Saha</span>
-                <div class="player-name">Kevin De Bruyne</div>
-                <div class="player-meta">Belçika | 35 Yaş | Manchester City</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> İlerleyen yaşına rağmen oyun zekasından hiçbir şey kaybetmediğini kanıtladı. Üçüncü bölgeye attığı öldürücü pas istatistiklerinde turnuvanın zirvesinde yer aldı.</div>
-            </div>
-
-            <!-- FORVETLER -->
-            <div class="player-card field forvet">
-                <span class="badge">Forvet</span>
-                <div class="player-name">Lionel Messi</div>
-                <div class="player-meta">Arjantin | 39 Yaş | Inter Miami</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Kariyerinin son Dünya Kupası'nda takımı saha içinden ziyade bir zihin lideri olarak yönetti. Final maçında galibiyeti getiren golü atarak turnuvanın en iyi oyuncusu (Altın Top) seçildi.</div>
-            </div>
-
-            <div class="player-card field forvet">
-                <span class="badge">Forvet</span>
-                <div class="player-name">Kylian Mbappé</div>
-                <div class="player-meta">Fransa | 27 Yaş | Real Madrid</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Sol koridorda durdurulamaz bir sürate ulaştı. Fransa'yı finale taşıyan ana güç oldu ve turnuva boyunca attığı 7 golle Altın Ayakkabı ödülünü müzesine götürdü.</div>
-            </div>
-
-            <div class="player-card field forvet">
-                <span class="badge">Forvet</span>
-                <div class="player-name">Lautaro Martínez</div>
-                <div class="player-meta">Arjantin | 28 Yaş | Inter Milan</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Messi'nin arkasında yarattığı boşlukları çok iyi değerlendirdi. Ön alan presiyle rakip stoperleri yıprattı ve turnuvayı 4 kritik golle tamamladı.</div>
-            </div>
-
-            <div class="player-card field forvet">
-                <span class="badge">Forvet</span>
-                <div class="player-name">Antoine Griezmann</div>
-                <div class="player-meta">Fransa | 35 Yaş | Atletico Madrid</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Takımın gizli kahramanıydı. Hücum hattında oynamasına rağmen savunmaya yardımları ve bağlantı paslarındaki kusursuzluğuyla taktiksel olarak turnuva takımına girdi.</div>
-            </div>
-
-            <!-- SANTRAFORLAR -->
-            <div class="player-card field santrafor">
-                <span class="badge">Santrafor</span>
-                <div class="player-name">Erling Haaland</div>
-                <div class="player-meta">Norveç | 25 Yaş | Manchester City</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Norveç'i tek başına çeyrek finale kadar taşımayı başardı. Ceza sahası içindeki fiziksel üstünlüğü ve bitiriciliği sayesinde turnuva genelinde 5 gol bıraktı.</div>
-            </div>
-
-            <div class="player-card field santrafor">
-                <span class="badge">Santrafor</span>
-                <div class="player-name">Harry Kane</div>
-                <div class="player-meta">İngiltere | 32 Yaş | Bayern Münih</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Sadece bir golcü gibi değil, derine inip kanatları besleyen bir oyun kurucu gibi oynadı. Turnuvayı 3 gol ve 2 asistle kapattı.</div>
-            </div>
-
-            <div class="player-card field santrafor">
-                <span class="badge">Santrafor</span>
-                <div class="player-name">Robert Lewandowski</div>
-                <div class="player-meta">Polonya | 37 Yaş | FC Barcelona</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Kısıtlı hücum gücüne sahip Polonya takımında tecrübesiyle fark yarattı. Grup aşamasında kritik anlarda attığı gollerle takımını son 16 turuna taşımayı bildi.</div>
-            </div>
-
-            <div class="player-card field santrafor">
-                <span class="badge">Santrafor</span>
-                <div class="player-name">Victor Osimhen</div>
-                <div class="player-meta">Nijerya | 27 Yaş | Galatasaray</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Atletizmi ve savunma arkası koşularıyla turnuvanın en çok faul maruz kalan forveti oldu. Nijerya'nın hücum hattındaki tüm enerjisini tek başına sağladı.</div>
-            </div>
-
-            <!-- KANATLAR -->
-            <div class="player-card field kanat">
-                <span class="badge">Kanat</span>
-                <div class="player-name">Lamine Yamal</div>
-                <div class="player-meta">İspanya | 19 Yaş | FC Barcelona</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Sağ kanattan içeri kat ederek yaptığı oyun kurulumlarıyla büyüledi. Turnuvanın En İyi Genç Oyuncusu seçilirken, 5 asist ile bu alanda zirveye ortak oldu.</div>
-            </div>
-
-            <div class="player-card field kanat">
-                <span class="badge">Kanat</span>
-                <div class="player-name">Vinícius Júnior</div>
-                <div class="player-meta">Brezilya | 26 Yaş | Real Madrid</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Brezilya'nın bire birlerdeki en büyük kozuydu. Rakip savunmaların dengesini bozan patlayıcı hızıyla turnuvayı 4 gol ve 3 asistlik harika bir istatistikle kapattı.</div>
-            </div>
-
-            <div class="player-card field kanat">
-                <span class="badge">Kanat</span>
-                <div class="player-name">Christian Pulisic</div>
-                <div class="player-meta">ABD | 27 Yaş | AC Milan</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Ev sahibi Amerika Birleşik Devletleri'nin lideriydi. Kaptanlık pazubandıyla çıktığı maçlarda takımını ateşleyen goller atarak halkı stadyumlara döktü.</div>
-            </div>
-
-            <div class="player-card field kanat">
-                <span class="badge">Kanat</span>
-                <div class="player-name">Bukayo Saka</div>
-                <div class="player-meta">İngiltere | 24 Yaş | Arsenal</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Çizgi disiplini ve hücum varyasyonlarındaki sürekliliğiyle kararlı bir performans sundu. Kritik çeyrek final maçında skoru değiştiren golü attı.</div>
-            </div>
-
-            <!-- SAVUNMA -->
-            <div class="player-card field savunma">
+            <div class="player-card field turkiye">
                 <span class="badge">Savunma</span>
                 <div class="player-name">Ferdi Kadıoğlu</div>
                 <div class="player-meta">Türkiye | 26 Yaş | Brighton</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Turnuvanın en iyi sol bek performanslarından birini sergiledi. Savunmadaki kritik müdahalelerinin yanı sıra, hücuma verdiği iç koridor destekleriyle modern bekin tanımını yaptı.</div>
+                <div class="player-detail"><strong>Performans:</strong> Sol bek koridorunda bitmek bilmeyen enerjisi ve iç alan bindirmeleriyle turnuvanın en iyi bek performanslarından birini sundu.</div>
             </div>
-
-            <div class="player-card field savunma">
-                <span class="badge">Savunma</span>
-                <div class="player-name">William Saliba</div>
-                <div class="player-meta">Fransa | 25 Yaş | Arsenal</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Fransa savunmasının merkezinde adeta soğukkanlı bir duvar ördü. Turnuva boyunca hava topu kaybetmeyen nadir stoperlerden biri oldu.</div>
-            </div>
-
-            <div class="player-card field savunma">
-                <span class="badge">Savunma</span>
-                <div class="player-name">Alfonso Davies</div>
-                <div class="player-meta">Kanada | 25 Yaş | Bayern Münih</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Ev sahibi Kanada'nın en büyük kozu olarak sol kanatta bir bekten ziyade bir açık oyuncusu gibi oynadı. Saf hızıyla rakiplerin savunma dengesini altüst etti.</div>
-            </div>
-
-            <div class="player-card field savunma">
-                <span class="badge">Savunma</span>
-                <div class="player-name">Achraf Hakimi</div>
-                <div class="player-meta">Fas | 27 Yaş | PSG</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Fas'ın yine savunma merkezli başarı hikayesinde sağ kanattan yaptığı bindirmelerle takımın ana geçiş istasyonu oldu. Turnuvanın en çok mesafe kat eden bek oyuncusuydu.</div>
-            </div>
-
-            <!-- KALECİLER -->
-            <div class="player-card gk kaleci">
-                <span class="badge">Kaleci</span>
-                <div class="player-name">Emiliano Martínez</div>
-                <div class="player-meta">Arjantin | 33 Yaş | Aston Villa</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Şampiyonluğun en büyük pay sahiplerinden biri olarak turnuvanın en iyi kalecisi seçildi ve Altın Eldiven ödülünü aldı.</div>
-                <div class="special-note"><strong>Kaleci Departmanı Notu:</strong> Çeyrek finaldeki gerilimli seri penaltı atışlarında 2 penaltı kurtararak takımını yarı finale taşıdı.</div>
-            </div>
-
-            <div class="player-card gk kaleci">
+            <div class="player-card gk turkiye">
                 <span class="badge">Kaleci</span>
                 <div class="player-name">Mert Günok</div>
                 <div class="player-meta">Türkiye | 37 Yaş | Beşiktaş</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Tecrübesi ve soğukkanlılığıyla A Milli Takım kalesinde devleşti. Takımın çeyrek finale kadar uzanan peri masalında kritik kurtarışlara imza attı.</div>
-                <div class="special-note"><strong>Kaleci Departmanı Notu:</strong> Son 16 turunda maçın uzatma dakikalarında 90 dereceye giden topu çizgiden çıkararak turnuvanın en iyi kurtarışına imza attı.</div>
+                <div class="player-detail"><strong>Performans:</strong> Tecrübesiyle kalede güven verdi. Son 16 turu uzatma dakikalarında çizgiden çıkardığı top turnuva tarihine geçti.</div>
+                <div class="special-note">Uzatmalarda refleksle net bir gol pozisyonunu engelledi.</div>
             </div>
 
-            <div class="player-card gk kaleci">
+            <!-- ARJANTİN -->
+            <div class="player-card field arjantin">
+                <span class="badge">Forvet</span>
+                <div class="player-name">Lionel Messi</div>
+                <div class="player-meta">Arjantin | 39 Yaş | Inter Miami</div>
+                <div class="player-detail"><strong>Performans:</strong> Kariyerinin son kupasında takımını zihinsel olarak sırtladı. Finalde şampiyonluğu getiren golü atıp Altın Top ödülünü aldı.</div>
+            </div>
+            <div class="player-card field arjantin">
+                <span class="badge">Forvet</span>
+                <div class="player-name">Lautaro Martínez</div>
+                <div class="player-meta">Arjantin | 28 Yaş | Inter Milan</div>
+                <div class="player-detail"><strong>Performans:</strong> Ön alan baskısında stoperleri yıprattı ve sıkışan maçları çözen 4 kritik gol kaydetti.</div>
+            </div>
+            <div class="player-card gk arjantin">
+                <span class="badge">Kaleci</span>
+                <div class="player-name">Emiliano Martínez</div>
+                <div class="player-meta">Arjantin | 33 Yaş | Aston Villa</div>
+                <div class="player-detail"><strong>Performans:</strong> Turnuvanın en iyi kalecisi seçilerek Altın Eldiven'i kazandı.</div>
+                <div class="special-note">Çeyrek final seri penaltı atışlarında 2 kurtarış yaparak maçı kopardı.</div>
+            </div>
+
+            <!-- FRANSA -->
+            <div class="player-card field fransa">
+                <span class="badge">Forvet</span>
+                <div class="player-name">Kylian Mbappé</div>
+                <div class="player-meta">Fransa | 27 Yaş | Real Madrid</div>
+                <div class="player-detail"><strong>Performans:</strong> Sol kanatta durdurulamaz bir süratle oynadı. Attığı 7 golle turnuvanın gol kralı (Altın Ayakkabı) oldu.</div>
+            </div>
+            <div class="player-card field fransa">
+                <span class="badge">Forvet</span>
+                <div class="player-name">Antoine Griezmann</div>
+                <div class="player-meta">Fransa | 35 Yaş | Atletico Madrid</div>
+                <div class="player-detail"><strong>Performans:</strong> Hücum hattı ile orta saha arasındaki bağlantıyı kurdu, savunma yardımlarıyla taktiksel liderlik yaptı.</div>
+            </div>
+            <div class="player-card field fransa">
+                <span class="badge">Savunma</span>
+                <div class="player-name">William Saliba</div>
+                <div class="player-meta">Fransa | 25 Yaş | Arsenal</div>
+                <div class="player-detail"><strong>Performans:</strong> Fransa defansının merkezinde hatasız oynadı. Hava toplarında %100'e yakın başarı sağladı.</div>
+            </div>
+            <div class="player-card gk fransa">
                 <span class="badge">Kaleci</span>
                 <div class="player-name">Mike Maignan</div>
                 <div class="player-meta">Fransa | 31 Yaş | AC Milan</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Lloris sonrası Fransa kalesini devralan Maignan, turnuva boyunca kalesinde sadece 4 gol görerek inanılmaz bir savunma güvenliği sağladı.</div>
-                <div class="special-note"><strong>Kaleci Departmanı Notu:</strong> Grup aşamalarında skor 0-0 iken çıkardığı penaltıyla Fransa'nın gruptan lider çıkmasını sağlayan isim oldu.</div>
+                <div class="player-detail"><strong>Performans:</strong> Finale giden yolda kalesinde sadece 4 gol görerek geçit vermez bir grafik çizdi.</div>
+                <div class="special-note">Grup aşamalarında hayati bir penaltı kurtardı.</div>
             </div>
 
-            <div class="player-card gk kaleci">
+            <!-- İNGİLTERE -->
+            <div class="player-card field ingiltere">
+                <span class="badge">Orta Saha</span>
+                <div class="player-name">Jude Bellingham</div>
+                <div class="player-meta">İngiltere | 23 Yaş | Real Madrid</div>
+                <div class="player-detail"><strong>Performans:</strong> Fizik kalitesi ve çift yönlü oyunuyla orta sahayı domine etti, turnuva takımına doğrudan seçildi.</div>
+            </div>
+            <div class="player-card field ingiltere">
+                <span class="badge">Santrafor</span>
+                <div class="player-name">Harry Kane</div>
+                <div class="player-meta">İngiltere | 32 Yaş | Bayern Münih</div>
+                <div class="player-detail"><strong>Performans:</strong> Derine inerek kanatları besleyen oyun tarzıyla 3 gol ve 2 asist üreterek gizli oyun kurucu gibi oynadı.</div>
+            </div>
+            <div class="player-card field ingiltere">
+                <span class="badge">Kanat</span>
+                <div class="player-name">Bukayo Saka</div>
+                <div class="player-meta">İngiltere | 24 Yaş | Arsenal</div>
+                <div class="player-detail"><strong>Performans:</strong> Sağ çizgide bire bir pozisyonları zorlayarak İngiltere'nin hücum genişliğini sağladı, çeyrek finalde gol attı.</div>
+            </div>
+
+            <!-- İSPANYA -->
+            <div class="player-card field ispanya">
+                <span class="badge">Kanat</span>
+                <div class="player-name">Lamine Yamal</div>
+                <div class="player-meta">İspanya | 19 Yaş | FC Barcelona</div>
+                <div class="player-detail"><strong>Performans:</strong> Turnuvanın En İyi Genç Oyuncusu seçildi. Yaratıcı pasları ve oyun aklıyla turnuvayı 5 asistle tamamladı.</div>
+            </div>
+
+            <!-- DİĞER ÜLKELER -->
+            <div class="player-card field diger">
+                <span class="badge">Santrafor</span>
+                <div class="player-name">Erling Haaland</div>
+                <div class="player-meta">Norveç | 25 Yaş | Manchester City</div>
+                <div class="player-detail"><strong>Performans:</strong> Norveç'i tek başına çeyrek finale taşıdı. Fiziki üstünlüğü ile turnuvada 5 gol atmayı başardı.</div>
+            </div>
+            <div class="player-card field diger">
+                <span class="badge">Kanat</span>
+                <div class="player-name">Vinícius Júnior</div>
+                <div class="player-meta">Brezilya | 26 Yaş | Real Madrid</div>
+                <div class="player-detail"><strong>Performans:</strong> Brezilya hücumlarının ana taşıyıcısı oldu. Sol kanattan ürettiği çalımlarla 4 gol, 3 asist yaptı.</div>
+            </div>
+            <div class="player-card field diger">
+                <span class="badge">Orta Saha</span>
+                <div class="player-name">Jamal Musiala</div>
+                <div class="player-meta">Almanya | 23 Yaş | Bayern Münih</div>
+                <div class="player-detail"><strong>Performans:</strong> Almanya'nın elenmesine rağmen dar alandaki kıvrak dribling becerisiyle turnuvada parlayan isim oldu.</div>
+            </div>
+            <div class="player-card field diger">
+                <span class="badge">Orta Saha</span>
+                <div class="player-name">Kevin De Bruyne</div>
+                <div class="player-meta">Belçika | 35 Yaş | Manchester City</div>
+                <div class="player-detail"><strong>Performans:</strong> Üçüncü bölgeye pas ve kilit pas istatistiklerinde ilerleyen yaşına rağmen turnuva lideri oldu.</div>
+            </div>
+            <div class="player-card field diger">
+                <span class="badge">Santrafor</span>
+                <div class="player-name">Victor Osimhen</div>
+                <div class="player-meta">Nijerya | 27 Yaş | Galatasaray</div>
+                <div class="player-detail"><strong>Performans:</strong> Savunma arkası patlayıcı koşularıyla Afrika temsilcisinin en agresif ve üretken gol silahı olmayı başardı.</div>
+            </div>
+            <div class="player-card field diger">
+                <span class="badge">Savunma</span>
+                <div class="player-name">Alfonso Davies</div>
+                <div class="player-meta">Kanada | 25 Yaş | Bayern Münih</div>
+                <div class="player-detail"><strong>Performans:</strong> Ev sahibi Kanada'da sol çizgiyi tek başına kullandı. Hızıyla geçiş hücumlarını başlatan isim oldu.</div>
+            </div>
+            <div class="player-card field diger">
+                <span class="badge">Savunma</span>
+                <div class="player-name">Achraf Hakimi</div>
+                <div class="player-meta">Fas | 27 Yaş | PSG</div>
+                <div class="player-detail"><strong>Performans:</strong> Fas'ın geçiş savunmasında sağ bekten yaptığı bindirmelerle takımın en çok mesafe kat eden ismi oldu.</div>
+            </div>
+            <div class="player-card gk diger">
                 <span class="badge">Kaleci</span>
                 <div class="player-name">Diogo Costa</div>
                 <div class="player-meta">Portekiz | 26 Yaş | FC Porto</div>
-                <div class="player-detail"><strong>Turnuva Performansı:</strong> Portekiz'in yarı finale uzanan yolculuğunda kalesine gelen şutlarda en yüksek kurtarış yüzdesi (84%) yakalayan kaleci oldu.</div>
-                <div class="special-note"><strong>Kaleci Departmanı Notu:</strong> Son 16 turundaki kritik eşleşmede karşı karşıya kalınan 3 net pozisyonda kalesini kapatarak gol izni vermedi.</div>
+                <div class="player-detail"><strong>Performans:</strong> Portekiz'in yarı final yürüyüşünde kalesinde %84 kurtarış başarısı yakalayarak zirveye oynadı.</div>
+                <div class="special-note">Son 16 turunda karşı karşıya 3 net pozisyonda gole izin vermedi.</div>
             </div>
 
         </div>
     </div>
 
     <script>
-        // --- Pozisyon Filtreleme Fonksiyonu ---
+        // --- Ülke Filtreleme Fonksiyonu ---
         function filterSelection(c) {
             let x, i;
             x = document.getElementsByClassName("player-card");
@@ -425,7 +360,7 @@
                 }
             }
             
-            // Aktif buton görselini güncelleme
+            // Aktif buton rengini güncelleme
             let btns = document.getElementsByClassName("filter-btn");
             for (i = 0; i < btns.length; i++) {
                 btns[i].classList.remove("active");
