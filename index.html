@@ -29,6 +29,59 @@
             font-size: 1.1rem;
             color: #bdc3c7;
         }
+
+        /* --- Fotoğraf Slayt Alanı (Slideshow) --- */
+        .slideshow-container {
+            max-width: 1160px;
+            position: relative;
+            margin: 30px auto 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            background-color: #000;
+            height: 450px;
+        }
+        .mySlides {
+            display: none;
+            position: relative;
+            height: 100%;
+        }
+        .mySlides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.75;
+        }
+        .slide-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            color: white;
+            padding: 30px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+        .slide-text h3 {
+            margin: 0 0 5px 0;
+            font-size: 2rem;
+            color: #f1c40f;
+        }
+        .slide-text p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #ecf0f1;
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1s;
+        }
+        @keyframes fade {
+            from { opacity: 0.4 } 
+            to { opacity: 1 }
+        }
+
+        /* --- Genel İçerik Yapısı --- */
         .container {
             max-width: 1200px;
             margin: 30px auto;
@@ -160,6 +213,65 @@
         <p>Tarihin En Geniş Katılımlı Turnuvası ve Öne Çıkan Yıldızları</p>
     </header>
 
+    <!-- 5 Saniyede Bir Değişen Oyuncu Fotoğrafları Alanı -->
+    <div class="slideshow-container">
+        
+        <!-- Slayt 1 - Messi -->
+        <div class="mySlides fade">
+            <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1200&auto=format&fit=crop" alt="Lionel Messi">
+            <div class="slide-text">
+                <h3>Lionel Messi (Arjantin)</h3>
+                <p>Turnuvanın en iyi oyuncusu seçildi, finalde şampiyonluğu getiren golü attı.</p>
+            </div>
+        </div>
+
+        <!-- Slayt 2 - Mbappé -->
+        <div class="mySlides fade">
+            <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1200&auto=format&fit=crop" alt="Kylian Mbappé">
+            <div class="slide-text">
+                <h3>Kylian Mbappé (Fransa)</h3>
+                <p>Turnuva boyunca attığı 7 golle turnuvanın gol kralı oldu (Altın Ayakkabı).</p>
+            </div>
+        </div>
+
+        <!-- Slayt 3 - Arda Güler -->
+        <div class="mySlides fade">
+            <img src="https://images.unsplash.com/photo-1518063319789-7217e6706b04?q=80&w=1200&auto=format&fit=crop" alt="Arda Güler">
+            <div class="slide-text">
+                <h3>Arda Güler (Türkiye)</h3>
+                <p>Jeneriklik golleri ve 4 asistiyle turnuvanın en çok konuşulan genç yeteneği oldu.</p>
+            </div>
+        </div>
+
+        <!-- Slayt 4 - Martinez (Kaleci) -->
+        <div class="mySlides fade">
+            <img src="https://images.unsplash.com/photo-1606925797300-0b35e9d17400?q=80&w=1200&auto=format&fit=crop" alt="Emiliano Martínez">
+            <div class="slide-text">
+                <h3>Emiliano Martínez (Arjantin - Kaleci)</h3>
+                <p>Altın Eldiven ödülünü kazandı, penaltı atışlarında devleşti.</p>
+            </div>
+        </div>
+
+        <!-- Slayt 5 - Lamine Yamal -->
+        <div class="mySlides fade">
+            <img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?q=80&w=1200&auto=format&fit=crop" alt="Lamine Yamal">
+            <div class="slide-text">
+                <h3>Lamine Yamal (İspanya)</h3>
+                <p>Turnuvanın En İyi Genç Oyuncusu ödülünü aldı, 5 asist yaptı.</p>
+            </div>
+        </div>
+
+        <!-- Slayt 6 - Mert Günok (Kaleci) -->
+        <div class="mySlides fade">
+            <img src="https://images.unsplash.com/photo-1525962893016-88022fe53afc?q=80&w=1200&auto=format&fit=crop" alt="Mert Günok">
+            <div class="slide-text">
+                <h3>Mert Günok (Türkiye - Kaleci)</h3>
+                <p>Son 16 turunda uzatmalarda çizgiden çıkardığı topla turnuva tarihine geçti.</p>
+            </div>
+        </div>
+
+    </div>
+
     <div class="container">
         
         <!-- Turnuva Genel Bilgileri -->
@@ -193,11 +305,11 @@
             </div>
         </div>
 
-        <h2 class="section-title">⭐ Turnuvaya Damga Vuran Oyuncular & Kaleciler</h2>
+        <h2 class="section-title">⭐ Turnuvaya Damga Vuran Oyuncular & Kaleciler Detayları</h2>
         
         <div class="player-grid">
             
-            <!-- Futbolcu 1 -->
+            <!-- Lionel Messi -->
             <div class="player-card field">
                 <span class="badge">Forvet</span>
                 <div class="player-name">Lionel Messi</div>
@@ -206,7 +318,7 @@
                 <div class="player-detail"><strong>Performans:</strong> Turnuvanın en iyi oyuncusu seçildi, finalde şampiyonluğu getiren golü attı.</div>
             </div>
 
-            <!-- Futbolcu 2 -->
+            <!-- Kylian Mbappé -->
             <div class="player-card field">
                 <span class="badge">Forvet</span>
                 <div class="player-name">Kylian Mbappé</div>
@@ -215,16 +327,16 @@
                 <div class="player-detail"><strong>Performans:</strong> Turnuva boyunca attığı 7 golle gol kralı oldu ve Altın Ayakkabı'yı kazandı.</div>
             </div>
 
-            <!-- Futbolcu 3 -->
+            <!-- Arda Güler -->
             <div class="player-card field">
-                <span class="badge">Kanat</span>
-                <div class="player-name">Lamine Yamal</div>
-                <div class="player-meta">İspanya | 19 Yaş</div>
-                <div class="player-detail"><strong>Kulüp:</strong> FC Barcelona</div>
-                <div class="player-detail"><strong>Performans:</strong> Turnuvanın En İyi Genç Oyuncusu ödülünü aldı, 5 asistle yaratıcılığını konuşturdu.</div>
+                <span class="badge">Oyun Kurucu</span>
+                <div class="player-name">Arda Güler</div>
+                <div class="player-meta">Türkiye | 21 Yaş</div>
+                <div class="player-detail"><strong>Kulüp:</strong> Real Madrid</div>
+                <div class="player-detail"><strong>Performans:</strong> Türkiye'yi turnuvada sırtlayan isim oldu. Attığı jeneriklik uzak mesafe golleri ve yaptığı 4 asist ile turnuvanın en çok konuşulan yetenekleri arasına girdi.</div>
             </div>
 
-            <!-- Kaleci 1 -->
+            <!-- Emiliano Martínez -->
             <div class="player-card gk">
                 <span class="badge">Kaleci</span>
                 <div class="player-name">Emiliano Martínez</div>
@@ -234,16 +346,35 @@
                 <div class="special-note"><strong>Öne Çıkan:</strong> Çeyrek finaldeki seri penaltı atışlarında 2 kritik kurtarış yaptı.</div>
             </div>
 
-            <!-- Futbolcu 4 -->
+            <!-- Lamine Yamal -->
             <div class="player-card field">
-                <span class="badge">Santrafor</span>
-                <div class="player-name">Erling Haaland</div>
-                <div class="player-meta">Norveç | 25 Yaş</div>
-                <div class="player-detail"><strong>Kulüp:</strong> Manchester City</div>
-                <div class="player-detail"><strong>Performans:</strong> Norveç'i tek başına sırtlayarak çeyrek finale kadar taşıdı, turnuvada 5 gol attı.</div>
+                <span class="badge">Kanat</span>
+                <div class="player-name">Lamine Yamal</div>
+                <div class="player-meta">İspanya | 19 Yaş</div>
+                <div class="player-detail"><strong>Kulüp:</strong> FC Barcelona</div>
+                <div class="player-detail"><strong>Performans:</strong> Turnuvanın En İyi Genç Oyuncusu ödülünü aldı, sağ kanattaki patlayıcılığı ile 5 asist yaptı.</div>
             </div>
 
-            <!-- Kaleci 2 -->
+            <!-- Mert Günok -->
+            <div class="player-card gk">
+                <span class="badge">Kaleci</span>
+                <div class="player-name">Mert Günok</div>
+                <div class="player-meta">Türkiye | 37 Yaş</div>
+                <div class="player-detail"><strong>Kulüp:</strong> Beşiktaş</div>
+                <div class="player-detail"><strong>Performans:</strong> Tecrübesiyle Türkiye'nin kalesinde tam bir güven abidesi oldu. Zorluk derecesi yüksek maçlarda refleksleriyle devleşti.</div>
+                <div class="special-note"><strong>Öne Çıkan:</strong> Son 16 turunda uzatma dakikalarında çizgiden çıkardığı top, turnuvanın en iyi kurtarışları arasına girdi.</div>
+            </div>
+
+            <!-- Ferdi Kadıoğlu -->
+            <div class="player-card field">
+                <span class="badge">Sol Bek</span>
+                <div class="player-name">Ferdi Kadıoğlu</div>
+                <div class="player-meta">Türkiye | 26 Yaş</div>
+                <div class="player-detail"><strong>Kulüp:</strong> Brighton</div>
+                <div class="player-detail"><strong>Performans:</strong> Turnuvanın en iyi sol bek performanslarından birini sergiledi. Sonsuz enerjisiyle hem savunmada geçit vermedi hem de hücuma büyük destek verdi.</div>
+            </div>
+
+            <!-- Mike Maignan -->
             <div class="player-card gk">
                 <span class="badge">Kaleci</span>
                 <div class="player-name">Mike Maignan</div>
@@ -253,27 +384,34 @@
                 <div class="special-note"><strong>Öne Çıkan:</strong> Grup aşamalarında hayati bir penaltı kurtardı.</div>
             </div>
 
-            <!-- Futbolcu 5 -->
-            <div class="player-card field">
-                <span class="badge">Kanat</span>
-                <div class="player-name">Christian Pulisic</div>
-                <div class="player-meta">ABD | 27 Yaş</div>
-                <div class="player-detail"><strong>Kulüp:</strong> AC Milan</div>
-                <div class="player-detail"><strong>Performans:</strong> Ev sahibi Amerika Birleşik Devletleri'ni son 16 turuna taşıyan lider ve dinamik bir performans sergiledi.</div>
-            </div>
-
-            <!-- Kaleci 3 -->
-            <div class="player-card gk">
-                <span class="badge">Kaleci</span>
-                <div class="player-name">Patrick Pentz</div>
-                <div class="player-meta">Avusturya | 29 Yaş</div>
-                <div class="player-detail"><strong>Kulüp:</strong> Brøndby</div>
-                <div class="player-detail"><strong>Performans:</strong> Turnuvanın sürpriz takımı Avusturya'nın kalesinde devleşti.</div>
-                <div class="special-note"><strong>Öne Çıkan:</strong> Son 16 turuna kadar maç başına en çok kurtarış yapan kaleci oldu.</div>
-            </div>
-
         </div>
     </div>
+
+    <!-- Fotoğrafları Sırayla Oynatan JavaScript Kodu -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            
+            // Tüm slaytları gizle
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            
+            slideIndex++;
+            // Başa dönme kontrolü
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            
+            // Aktif slaytı göster
+            slides[slideIndex-1].style.display = "block";  
+            
+            // Tam 5 saniyede (5000 milisaniye) bir fonksiyonu tekrar çağır
+            setTimeout(showSlides, 5000); 
+        }
+    </script>
 
 </body>
 </html>
