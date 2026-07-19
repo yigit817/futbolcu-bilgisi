@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 FIFA Dünya Kupası Raporu</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1rem;
+            color: #bdc3c7;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .summary-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            border-left: 5px solid #27ae60;
+        }
+        .summary-card h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .info-item strong {
+            color: #7f8c8d;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        .info-item span {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 3px solid #34495e;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+        .player-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .player-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        .player-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+        .player-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+        }
+        .player-card.field::before {
+            background-color: #3498db;
+        }
+        .player-card.gk::before {
+            background-color: #e67e22;
+        }
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .player-card.field .badge {
+            background-color: #e1f5fe;
+            color: #0288d1;
+        }
+        .player-card.gk .badge {
+            background-color: #fff3e0;
+            color: #f57c00;
+        }
+        .player-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .player-meta {
+            font-size: 0.9rem;
+            color: #95a5a6;
+            margin-bottom: 15px;
+        }
+        .player-detail {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        .player-detail strong {
+            color: #34495e;
+        }
+        .special-note {
+            background-color: #fdf2e9;
+            border-radius: 6px;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #d35400;
+            border-left: 3px solid #e67e22;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>2026 FIFA DÜNYA KUPASI</h1>
+        <p>Tarihin En Geniş Katılımlı Turnuvası ve Öne Çıkan Yıldızları</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Turnuva Genel Bilgileri -->
+        <div class="summary-card">
+            <h2>🏆 Turnuva Özeti & Şampiyonluk</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>Ev Sahipleri</strong>
+                    <span>ABD, Meksika, Kanada</span>
+                </div>
+                <div class="info-item">
+                    <strong>Format</strong>
+                    <span>48 Takım</span>
+                </div>
+                <div class="info-item">
+                    <strong>Dönem</strong>
+                    <span>11 Haziran - 19 Temmuz 2026</span>
+                </div>
+                <div class="info-item">
+                    <strong>Final Stadyumu</strong>
+                    <span>MetLife Stadium (NY/NJ)</span>
+                </div>
+                <div class="info-item">
+                    <strong>ŞAMPİYON</strong>
+                    <span style="color: #27ae60;">Arjantin 🏆</span>
+                </div>
+                <div class="info-item">
+                    <strong>Final Skoru</strong>
+                    <span>Arjantin 2 - 1 Fransa</span>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">⭐ Turnuvaya Damga Vuran Oyuncular & Kaleciler</h2>
+        
+        <div class="player-grid">
+            
+            <!-- Futbolcu 1 -->
+            <div class="player-card field">
+                <span class="badge">Forvet</span>
+                <div class="player-name">Lionel Messi</div>
+                <div class="player-meta">Arjantin | 39 Yaş</div>
+                <div class="player-detail"><strong>Kulüp:</strong> Inter Miami</div>
+                <div class="player-detail"><strong>Performans:</strong> Turnuvanın en iyi oyuncusu seçildi, finalde şampiyonluğu getiren golü attı.</div>
+            </div>
+
+            <!-- Futbolcu 2 -->
+            <div class="player-card field">
+                <span class="badge">Forvet</span>
+                <div class="player-name">Kylian Mbappé</div>
+                <div class="player-meta">Fransa | 27 Yaş</div>
+                <div class="player-detail"><strong>Kulüp:</strong> Real Madrid</div>
+                <div class="player-detail"><strong>Performans:</strong> Turnuva boyunca attığı 7 golle gol kralı oldu ve Altın Ayakkabı'yı kazandı.</div>
+            </div>
+
+            <!-- Futbolcu 3 -->
+            <div class="player-card field">
+                <span class="badge">Kanat</span>
+                <div class="player-name">Lamine Yamal</div>
+                <div class="player-meta">İspanya | 19 Yaş</div>
+                <div class="player-detail"><strong>Kulüp:</strong> FC Barcelona</div>
+                <div class="player-detail"><strong>Performans:</strong> Turnuvanın En İyi Genç Oyuncusu ödülünü aldı, 5 asistle yaratıcılığını konuşturdu.</div>
+            </div>
+
+            <!-- Kaleci 1 -->
+            <div class="player-card gk">
+                <span class="badge">Kaleci</span>
+                <div class="player-name">Emiliano Martínez</div>
+                <div class="player-meta">Arjantin | 33 Yaş</div>
+                <div class="player-detail"><strong>Kulüp:</strong> Aston Villa</div>
+                <div class="player-detail"><strong>Performans:</strong> Turnuvanın En İyi Kalecisi (Altın Eldiven) ödülünün sahibi oldu.</div>
+                <div class="special-note"><strong>Öne Çıkan:</strong> Çeyrek finaldeki seri penaltı atışlarında 2 kritik kurtarış yaptı.</div>
+            </div>
+
+            <!-- Futbolcu 4 -->
+            <div class="player-card field">
+                <span class="badge">Santrafor</span>
+                <div class="player-name">Erling Haaland</div>
+                <div class="player-meta">Norveç | 25 Yaş</div>
+                <div class="player-detail"><strong>Kulüp:</strong> Manchester City</div>
+                <div class="player-detail"><strong>Performans:</strong> Norveç'i tek başına sırtlayarak çeyrek finale kadar taşıdı, turnuvada 5 gol attı.</div>
+            </div>
+
+            <!-- Kaleci 2 -->
+            <div class="player-card gk">
+                <span class="badge">Kaleci</span>
+                <div class="player-name">Mike Maignan</div>
+                <div class="player-meta">Fransa | 31 Yaş</div>
+                <div class="player-detail"><strong>Kulüp:</strong> AC Milan</div>
+                <div class="player-detail"><strong>Performans:</strong> Fransa'nın finale yükselme yolculuğunda kalesinde sadece 4 gol gördü.</div>
+                <div class="special-note"><strong>Öne Çıkan:</strong> Grup aşamalarında hayati bir penaltı kurtardı.</div>
+            </div>
+
+            <!-- Futbolcu 5 -->
+            <div class="player-card field">
+                <span class="badge">Kanat</span>
+                <div class="player-name">Christian Pulisic</div>
+                <div class="player-meta">ABD | 27 Yaş</div>
+                <div class="player-detail"><strong>Kulüp:</strong> AC Milan</div>
+                <div class="player-detail"><strong>Performans:</strong> Ev sahibi Amerika Birleşik Devletleri'ni son 16 turuna taşıyan lider ve dinamik bir performans sergiledi.</div>
+            </div>
+
+            <!-- Kaleci 3 -->
+            <div class="player-card gk">
+                <span class="badge">Kaleci</span>
+                <div class="player-name">Patrick Pentz</div>
+                <div class="player-meta">Avusturya | 29 Yaş</div>
+                <div class="player-detail"><strong>Kulüp:</strong> Brøndby</div>
+                <div class="player-detail"><strong>Performans:</strong> Turnuvanın sürpriz takımı Avusturya'nın kalesinde devleşti.</div>
+                <div class="special-note"><strong>Öne Çıkan:</strong> Son 16 turuna kadar maç başına en çok kurtarış yapan kaleci oldu.</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
